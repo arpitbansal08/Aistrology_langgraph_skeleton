@@ -1,0 +1,25 @@
+[project]
+name = "aistrology-langgraph-skeleton"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "arpitbansal08", email = "101734269+arpitbansal08@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "langchain>=1.4.7",
+    "langchain-google-genai>=4.4.2",
+    "langgraph>=1.2.17",
+    "langsmith>=0.14.12",
+    "pydantic>=2.14.1",
+    "typing>=3.10.0.0",
+]
+
+[project.scripts]
+aistrology-langgraph-skeleton = "aistrology_langgraph_skeleton:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
