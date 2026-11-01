@@ -2,29 +2,74 @@
 
 ## Purpose
 
-Answer questions about vocational strengths, work style, career direction, professional development, job changes, and career timing through natal and predictive astrology. Frame results as options for reflection, not hiring, income, or promotion predictions.
+Answer questions about career direction, work style, professional timing, business choices, and role changes using Jagannatha Hora MCP outputs. Keep the guidance practical and non-deterministic.
 
-## Required inputs
 
-Collect or confirm the full birth date, accurate birth time, and birthplace. A reliable birth time is especially important because career interpretation depends on the Ascendant, Midheaven/10th house, house rulers, and house cusps.
+## Activate for
+- Career growth
+- Job changes
+- Promotions
+- Professional success
+- Business prospects
+- Career timing
 
-For a timing question, also collect the target period, current city if a relocation chart is requested, and the concrete decision the user is considering (for example, changing roles, interviewing, or launching a business).
+## Best-fit MCP tools
 
-## Tools and calculations
+Use the smallest tool set that answers the user question:
 
-Use the birth-details and natal-chart calculation workflow:
+- `generate_horoscope` for a concise natal overview and available sections
+- `get_planetary_states` for sign, house, and planetary placement context
+- `get_dasha` for major life-phase timing around career turns
+- `get_gochara` or `get_gochara_range` for transits affecting jobs, reputation, interviews, or business opportunities
+- `get_shad_bala` and `get_bhava_bala` for strength and house emphasis
+- `get_divisional_chart` when a deeper professional lens is requested
+- `get_marriage_match` only if relationship and career choices are being evaluated together
 
-1. Geocode the birthplace; resolve the historical time zone; convert the birth time to UTC.
-2. Calculate the natal chart with planetary positions, Ascendant, Midheaven, houses, rulers, and aspects using the selected zodiac and house system.
-3. Calculate only relevant timing techniques—such as transits, secondary progressions, solar return, or dasha—when the user asks about a time period.
-4. If comparing locations, calculate a relocation chart with the destination coordinates.
+## Career-specific focus
 
-Focus the analysis on the 2nd, 6th, and 10th houses; Midheaven; their rulers; Sun, Saturn, Jupiter, Mercury, Mars, and relevant aspects. Do not claim a placement guarantees a specific profession, salary, job offer, or outcome.
+Prioritize the chart areas most relevant to work and vocation:
+
+- 10th house and Midheaven / career axis
+- 2nd house and financial stability
+- 6th house and work environment, routines, and service
+- 10th house ruler and its condition
+- Saturn, Jupiter, Mercury, Mars, and Sun placements
+- Dasha and gochara timing windows
+
+## Tool selection
+
+### Divisional chart
+Use get_divisional_chart with D-10 when career
+divisional chart information is required.
+
+### Dasha
+Use get_dasha to retrieve current and upcoming
+planetary periods relevant to career timing.
+
+### Yogas
+Use get_yogas when identifying career-related
+yogas is relevant.
+
+### Planetary strength
+Use get_shad_bala for planetary strength.
+Use get_bhava_bala for house strength.
+Use get_vimsopaka_bala when varga-based
+dignity strength is relevant.
+
+Use these calculations as evidence-based context and avoid claiming that any placement guarantees a job, promotion, salary, or business outcome.
 
 ## Response guidance
 
 - Lead with a concise pattern of strengths, preferred work environments, and growth edges.
-- Tie every chart-specific statement to calculated placements or aspects.
-- Turn insights into practical next steps such as skill-building, networking, portfolio work, or decision criteria.
-- Describe timing as periods of emphasis or opportunity, never certainty.
-- Do not use astrology to make employment decisions about another person or to promise financial results.
+- Tie each career point to actual chart data or timing windows.
+- Translate the reading into practical next steps such as skill-building, networking, portfolio work, or decision filters.
+- Frame timing as periods of emphasis or opportunity, never certainty.
+- Keep recommendations respectful and non-discriminatory.
+- Do not use astrology to make employment or promotion decisions about another person.
+
+## Execution rules
+- Do not call every tool by default.
+- Select tools based on the actual question.
+- Use live MCP schemas to validate arguments.
+- Do not invent missing birth information.
+- Combine calculation results when necessary.

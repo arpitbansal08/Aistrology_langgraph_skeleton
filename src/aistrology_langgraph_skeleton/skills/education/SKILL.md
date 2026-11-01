@@ -2,27 +2,65 @@
 
 ## Purpose
 
-Answer questions about learning preferences, study habits, academic interests, skill development, exams, and education planning using astrology as a reflective framework.
+Answer questions about learning preferences, study habits, academic interests, skill development, exams, and educational planning using Jagannatha Hora MCP outputs. Keep the reading educational and reflective rather than deterministic.
 
-## Required inputs
+## Activate for
+- Academic performance
+- Higher education
+- Educational prospects
+- Studies and learning
+- Education-related timing
 
-Collect or confirm birth date, accurate birth time, and birthplace. Explain that an unknown birth time limits confidence in the Ascendant and houses, including education-related houses.
+## Best-fit MCP tools
 
-For a study or exam timing question, also collect the target date range, subject area, and the practical objective (for example, choosing a course, setting a study plan, or preparing for an exam).
+Use the smallest tool set needed:
 
-## Tools and calculations
+- `generate_horoscope` for a first-pass natal summary
+- `get_planetary_states` for placement context
+- `get_dasha` or `get_gochara` for timing windows around studying, exams, or academic transitions
+- `get_shad_bala` and `get_bhava_bala` for overall strength and life-area emphasis
+- `get_divisional_chart` when the user wants a deeper educational or skill-specific lens
+- `get_muhurta` only when the user asks specifically about auspicious timing for academics or exam preparation
 
-Use the birth-details and chart-calculation workflow:
+## Education-specific focus
 
-1. Geocode birthplace, resolve historical time zone, convert local time to UTC, and calculate the natal chart.
-2. Calculate planetary positions, Ascendant, house cusps, rulers, and aspects in the selected chart system.
-3. When timing is requested, calculate relevant transits, progressions, returns, or dasha for the requested period.
+Give extra attention to:
 
-Examine Mercury, Jupiter, Moon, Saturn, the 3rd, 5th, 9th, and 12th houses and their rulers, plus aspects relevant to focus, curiosity, discipline, and communication. Do not state that a chart guarantees grades, admissions, scholarships, or exam results.
+- 3rd house: writing, speech, learning style, communication
+- 5th house: learning, intelligence, creativity, exam performance
+- 9th house: higher education, philosophy, research, long-form knowledge
+- 12th house: hidden learning, solitude, reflection, foreign study
+- Mercury, Jupiter, Moon, and Saturn placements and aspects
+- Dasha periods that emphasize concentration, revision, or transitions
+
+## Tool selection
+
+### Divisional chart
+Use get_divisional_chart with D-24 when
+education divisional chart information is required.
+
+### Dasha
+Use get_dasha for education-related timing.
+
+### Yogas
+Use get_yogas when identifying relevant yogas.
+
+### Planetary strength
+Use get_shad_bala for planetary strength.
+Use get_bhava_bala for house strength.
+Use get_vimsopaka_bala when varga-based strength
+is relevant.
+
+## Execution rules
+- Select tools based on the specific question.
+- Do not retrieve all divisional charts.
+- Use live MCP schemas.
+- Never invent missing birth information.
 
 ## Response guidance
 
-- Translate chart patterns into concrete learning tactics: practice style, note-taking, accountability, scheduling, and revision rhythm.
-- Name both natural preferences and habits that may need structure.
+- Translate chart patterns into practical learning tactics such as practice style, note-taking, scheduling, accountability, and revision rhythm.
+- Name both natural strengths and habits that may need structure.
 - Present timing as a planning lens, not a substitute for preparation or educational advice.
 - Keep recommendations inclusive and avoid making aptitude or intelligence claims from astrology.
+- Do not say a chart guarantees grades, admissions, scholarships, or exam results.

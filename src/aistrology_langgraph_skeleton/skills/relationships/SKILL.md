@@ -2,29 +2,72 @@
 
 ## Purpose
 
-Answer questions about relationship patterns, attachment needs, communication, compatibility, partnership timing, and relational growth. Keep the reading respectful, consent-aware, and non-deterministic.
+Answer questions about relationship patterns, attachment needs, communication, compatibility, partnership timing, and relational growth using Jagannatha Hora MCP outputs. Keep the reading respectful, consent-aware, and non-deterministic.
 
-## Required inputs
+## Activate for
+- Marriage timing
+- Spouse characteristics
+- Love and relationships
+- Marriage compatibility
+- Manglik dosha
+- Relationship prospects
 
-For an individual reading, collect or confirm date of birth, accurate birth time, and birthplace. For compatibility or synastry, collect those details separately for each consenting person, clearly label whose details belong to whom, and note any unknown or estimated times.
+## Best-fit MCP tools
 
-For a current relationship-timing question, also collect the relevant date range. Do not request private information about a third party without a legitimate, consent-based reason.
+Use the minimum required tool set:
 
-## Tools and calculations
+- `generate_horoscope` for each person’s natal overview
+- `get_planetary_states` for sign and house context
+- `get_marriage_match` for compatibility or marriage-related comparisons
+- `get_dasha` and `get_gochara` for timing windows around relationship phases
+- `get_divisional_chart` when a relationship-specific chart lens is requested
+- `get_yogas` or `get_doshas` when a broad overview of relationship patterns is useful
 
-Use a trusted chart calculator to:
+## Relationship-specific focus
 
-1. Geocode each birthplace, resolve historical time zones, convert local times to UTC, and calculate each natal chart.
-2. Calculate planets, Ascendant, house cusps, rulers, and aspects for each person using the same zodiac and house system.
-3. For compatibility, calculate synastry aspects and, if requested, a composite chart. Flag that missing birth times make houses, angles, and some Moon/Ascendant details uncertain.
-4. For timing, calculate relevant transits, progressions, returns, or dasha against the established natal chart.
+Prioritize the chart areas most relevant to partnership and compatibility:
 
-Prioritize the 5th, 7th, and 8th houses and their rulers; Venus, Mars, Moon, Mercury, Sun, Saturn, Jupiter, Nodes, and major inter-chart aspects. Never fabricate chart data.
+- 5th house: romance, attraction, pleasure, emotional expression
+- 7th house: partnership, marriage, committed relationship
+- 8th house: intimacy, emotional depth, shared resources, transformation
+- Venus, Mars, Moon, Mercury, Sun, Saturn, and Jupiter placements
+- Synastry aspects between charts
+- Dasha and gochara windows that may intensify connection or stress
+
+## Tool selection
+
+### Divisional chart
+Use get_divisional_chart with D-9 when Navamsa
+information is required.
+
+### Dasha
+Use get_dasha for marriage-related timing questions.
+
+### Marriage matching
+Use get_marriage_match when comparing two birth charts.
+Requires two separate birth objects.
+
+### Doshas
+Use get_doshas when the user asks about Manglik
+or other documented doshas.
+
+### Arudhas
+Use get_arudha_padas when the user asks about
+Upapada Lagna or another arudha pada.
+
+### Yogas
+Use get_yogas when relevant to the question
+
+## Execution rules
+- For compatibility, obtain both people's birth details.
+- Do not use one person's birth details for both charts.
+- Use D-9 only when the question requires it.
+- Do not call every tool by default.
 
 ## Response guidance
 
-- Discuss dynamics, needs, and communication patterns rather than declaring a match "meant to be" or doomed.
+- Discuss dynamics, needs, and communication patterns rather than declaring a match as “meant to be” or doomed.
 - Avoid predicting infidelity, abuse, marriage, divorce, pregnancy, or another person’s feelings as facts.
 - Encourage direct communication, consent, boundaries, and personal agency.
-- Never use a reading to justify surveillance, coercion, or decisions on behalf of another person.
+- Never use astrology to justify coercion, surveillance, or decisions on behalf of another person.
 - For abuse, immediate danger, or coercion, prioritize real-world safety support over astrology.
